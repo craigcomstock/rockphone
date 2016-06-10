@@ -1,9 +1,14 @@
 # rockphone
 A 100% open source phone... in the form of a small rock!
 
+# hardware
+Current plan is to prototype a breakout board for the SIM800H and/or MT2502A and proceed from there. These are selected because they both contain the MT6260 which is being opened up by the fernly project.
+
+https://github.com/xobs/fernly
+
+The breakout boards will likely be something that is simple, cheap and easy to experiment with. Either have headers that plug into a breadboard or have a header like is on the Raspberry Pi to breakout via ribbon cable or via adapter to breadboard.
 
 # manifesto
-
 Make a phone that is a small, very solid, rock-like object. Maybe even surround it with some material like concrete. No screen, plugs, wires, outlets, etc... Interaction would be through Bluetooth, WIFI, GSM and a BCE (Bone Conducting Exciter) a sort of speaker you must place against your head to hear well. A microphone would be included somehow. The device would charge via Qi Wireless charging. The device would be somewhat touch sensitive, either just a single area or maybe a complex enough area to recognize simple gestures, possibly even letters.
 
 The idea is to make a very sturdy and right-sized object to carry around in your pocket. If it falls from high, no problem. Also so that it doesn't disturb your life by beeping, buzzing and showing things on a screen.

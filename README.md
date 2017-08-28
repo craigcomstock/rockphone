@@ -27,8 +27,8 @@ MediaTek 6260/6261/??? core processor for
 - on a necklace
 
 # slogans
-"Hold your head up!" -from the band Argent song... no screen... no need to wander around looking down.
-"A Personal Journey" -contrasting this device with cloud-based language parsing and interactions... this device will by default not use the cloud but rather develop with the individual user.
+- "Hold your head up!" -from the band Argent song... no screen... no need to wander around looking down.
+- "A Personal Journey" -contrasting this device with cloud-based language parsing and interactions... this device will by default not use the cloud but rather develop with the individual user.
 
 # technical plan
 - port nuttx-bb (osmocom-bb baseband + posix OS) to MediaTek chipset(s) (6260/6261 are 2G, others 3G+)

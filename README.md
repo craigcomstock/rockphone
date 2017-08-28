@@ -1,28 +1,38 @@
 # rockphone
 A 100% open source phone... in the form of a small rock!
 
-# hardware
-Current plan is to prototype a breakout board for the SIM800H and/or MT2502A and proceed from there. These are selected because they both contain the MT6260 which is being opened up by the fernly project.
-
-https://github.com/xobs/fernly
-
-The breakout boards will likely be something that is simple, cheap and easy to experiment with. Either have headers that plug into a breadboard or have a header like is on the Raspberry Pi to breakout via ribbon cable or via adapter to breadboard.
-
 # manifesto
-Make a phone that is a small, very solid, rock-like object. Maybe even surround it with some material like concrete. No screen, plugs, wires, outlets, etc... Interaction would be through Bluetooth, WIFI, GSM and a BCE (Bone Conducting Exciter) a sort of speaker you must place against your head to hear well. A microphone would be included somehow. The device would charge via Qi Wireless charging. The device would be somewhat touch sensitive, either just a single area or maybe a complex enough area to recognize simple gestures, possibly even letters.
+Make a phone that is a small, very solid, rock-like object. Something that feels very natural and calming to the touch and fits nicely inside of a pocket, on your wrist with a strap, or up to your ear to listen discretely via bone conduction.
 
-The idea is to make a very sturdy and right-sized object to carry around in your pocket. If it falls from high, no problem. Also so that it doesn't disturb your life by beeping, buzzing and showing things on a screen.
+This will be your mobile generic computing device with wireless connectivity anywhere. Stay in touch if you need to, or stay out of touch most of the time to get some peace. 
 
-Inside, the system would primarily be written in Lua (LuaJIT likely to interface well with C libraries/functions) so that it is fairly easy to understand like an old BASIC computer (TRS-80, C64, Apple). When you connect via Bluetooth or WIFI from your computer you are on a console and can do things like text, call, email, etc... you can also write new functions or debug/modify existing functions.
+# specs
+MediaTek 6260/6261/??? core processor for 
+- 2G/3G/4G/LTE/??? 
+- SIM card slot
+- SD card slot
+- headset jack (optional)
+- wifi
+- bluetooth for audio, serial console, more
+- qi charging
+- bone conducting exciter so you can put the rock up to your temple/ear and do a voice call or interact with the device via voice, discretely
+- microphone
+- some subtle lighting, like maybe one glowing RGB light where color indicates different states
+- some simple capacitive or resistive touch for simple gestures or handwriting recognition
+- accelerometer for movement gesture control
 
-The goal is a 100% open source device. Probable external projects to be used are:
+# carrying options
+- bare, in your pocket
+- in a watchband
+- on a necklace
 
-- luajit (for main interface and programming language)
-- pocketsphinx (for voice recognition)
-- espeak (for speech synthesis)
-- python pyo (sound synth library)
-- fernly, nuttx, osmocom-bb for eventually driving the open part of the system down deeper into the hardware.
-
-Slogans are
+# slogans
 "Hold your head up!" -from the band Argent song... no screen... no need to wander around looking down.
 "A Personal Journey" -contrasting this device with cloud-based language parsing and interactions... this device will by default not use the cloud but rather develop with the individual user.
+
+# technical plan
+- port nuttx-bb (osmocom-bb baseband + posix OS) to MediaTek chipset(s) (6260/6261 are 2G, others 3G+)
+- re-work fernvale open source hardware into the rockphone form factor
+- develop console/speech user interface on top of nuttx-bb
+- develop simple-as-possible manufacturing plan for actual device
+- try to keep device cost as low as possible, goal right now is $35

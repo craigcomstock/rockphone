@@ -1,5 +1,5 @@
 # rockphone
-An "as open as possible" phone... in the form of a small rock!
+A phone which tries to reconcile my love hate relationship with mobile computing technology. Will be as open source as possible both software and hardware. In the shape of a small rock!
 
 # manifesto
 Make a phone that is a small, very solid, rock-like object. Something that feels very natural and calming to the touch and fits nicely inside of a pocket, on your wrist with a strap, or up to your ear to listen discretely via bone conduction.

@@ -31,8 +31,21 @@ MediaTek 6260/6261/??? core processor for
 - "A Personal Journey" -contrasting this device with cloud-based language parsing and interactions... this device will by default not use the cloud but rather develop with the individual user.
 
 # technical plan
-- port nuttx-bb (osmocom-bb baseband + posix OS) to MediaTek chipset(s) (6260/6261 are 2G, others 3G+)
-- re-work fernvale open source hardware into the rockphone form factor
-- develop console/speech user interface on top of nuttx-bb
-- develop simple-as-possible manufacturing plan for actual device
-- try to keep device cost as low as possible, goal right now is $35
+
+At this point I have been pursuing three separate paths:
+- prototype user interface for android
+  - simple UI https://github.com/craigcomstock/termux-app/tree/gesture
+    - gesture recognition
+    - two-line terminal mode (question/answer) prepares for voice interaction
+  - command line sms/mms: https://github.com/craigcomstock/termux-api/tree/smsmms-send-receive
+
+- postmarketos on various devices
+  - gesture input on linux framebuffer https://gitlab.com/unrznbl/gesture/
+  - linux framebuffer "UI" https://gitlab.com/unrznbl/shelli/
+
+- mediatek reverse engineering and such
+  - port nuttx-bb (osmocom-bb baseband + posix OS) to MediaTek chipset(s) (6260/6261 are 2G, others 3G+)
+  - re-work fernvale open source hardware into the rockphone form factor
+  - develop console/speech user interface on top of nuttx-bb
+  - develop simple-as-possible manufacturing plan for actual device
+  - try to keep device cost as low as possible, goal right now is $35
